@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace my_books.Migrations
 {
-    public partial class InitialDataBaseMigration : Migration
+    public partial class InitalDataBaseMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,14 +15,14 @@ namespace my_books.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsRead = table.Column<bool>(type: "bit", nullable: false),
                     DateRead = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Rate = table.Column<int>(type: "int", nullable: true),
-                    Genre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CoverUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Rate = table.Column<int>(type: "int", nullable: false),
+                    Genre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CoverUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

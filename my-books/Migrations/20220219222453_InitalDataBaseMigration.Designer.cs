@@ -12,8 +12,8 @@ using my_books.Data;
 namespace my_books.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220216170508_InitialDataBaseMigration")]
-    partial class InitialDataBaseMigration
+    [Migration("20220219222453_InitalDataBaseMigration")]
+    partial class InitalDataBaseMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
